@@ -14,6 +14,25 @@
  </head>
  <body>
      <div class="wrapper"> 
+
+     <!-- contacts-section -->
+
+     <section class="contacts-section">
+         <a  href="" class="telegram-link">
+             <img src="./img/icons/telegram-icon.svg" class="telegram-icon" alt="">
+         </a>
+         <a href="" class="viber-link">
+             <img src="./img/icons/viber-icon.svg" class="viber-icon" alt="viber-link">
+         </a>
+         <a href="tel:+380934170645" class="phone-link-icon">
+             <img src="./img/icons/phone-icon.svg" class="phone-icon" alt="phone-link">
+         </a>
+        <a href="tel:+380934170645" class="phone-link-number">
+            +380 93 417 06 45
+        </a>
+
+     </section>
+    
      <!-- experience-section -->
 
      <section class="experience-section">
@@ -87,7 +106,99 @@
               
 
      </section>
+
+     <!--Project-price-section-->
+
+    <section class="project-price-section">
+        <form action="#" class="project-price-form">
+             <h4 class="project-price-title">Рассчитай стоимость проекта</h4>
+
+             <div class="project-type-container">
+
+                 <label for="project-type" class="project-price-form-field-title">Тип сайта</label>
+                 <select name="project-type" id="project-type" class="project-price-select">
+                     <option value="Landing-page">Landing page</option>
+                     <option value="cms">CMS</option>   
+                     <option value="wordpress">wordpress</option>
+                     <option selected value="e-shop">E shop</option>
+                </select>
+            </div>
+
+            <div class="activity-type-container">
+            
+                <p class="project-price-form-field-title">Тип работ</p>
+
+                 <div class="activity-type-item">
+                     <input type="checkbox" name="project-management" id="project-management" class="activity-type-checkbox">
+                     <label for="project-management" class="activity-type-title">Project Management</label>
+                 </div>
+
+                 <div class="activity-type-item">
+                     <input type="checkbox" name="design" id="design" class="activity-type-checkbox">
+                     <label for="design" class="activity-type-title">Design</label>
+                 </div>
+
+                 <div class="activity-type-item">
+                     <input checked type="checkbox" name="development" id="development" class="activity-type-checkbox">
+                     <label for="development" class="activity-type-title">Development</label>
+                 </div>
+
+                 <div class="activity-type-item">
+                     <input type="checkbox" name="qa" id="qa" class="activity-type-checkbox">
+                     <label for="qa" class="activity-type-title">QA</label>
+                 </div>
+                
+                
+                
+                
+             </div>
+
+            <div class="project-price-container">
+                <p class="project-price-form-field-title">Стоимость</p>
+                <P class="project-price-sum"><span class="project-price-sum-curency">$</span> 2000</P>
+            </div>
+            <div class="project-price-calculation-container">
+            <button class="project-price-calculate-btn">Отправить запрос</button>
+            </div>
+        </form>
     
+    </section>
+
+<!-- Modals section -->
+
     </div>
+
+    <div class="modal-bgd">
+        <div class="modal-container">
+            <button class="modal-close-btn">
+                <img src="./img/icons/close-icon.svg" alt="close icon">
+            </button>
+            <img src="./img/icons/mail-icon.svg" alt="mail-icon" class="modal-icon">
+            <h4 class="modal-title">Я свяжусь с вами на<br>протяжении ближайшего часа</h4>
+
+             <form action="#" class="modal-container-form">
+                <label for="user-email" class="user-email-title">Email</label>
+                <input type="email" name="user-email" id="user-email" class="user-email" placeholder="Укажите email">
+                
+                <button type="submit" class="modal-submit-btn">Отправить</button>
+             </form>
+
+        </div>
+    </div>
+
+    <div class="modal-bgd modal-active">
+        <div class="modal-container modal-container-success">
+         <button class="modal-close-btn">
+             <img src="./img/icons/close-icon.svg" alt="close icon">
+         </button>
+
+         <img src="./img/icons/mdi_email-fast.svg" alt="email delivered" class="modal-success-icon">
+
+         <p class="modal-success-message"> Всё отлично!<br>
+             Запрос отправлен
+         </p>
+        </div>
+    </div>
+    
 </body>
 </html>

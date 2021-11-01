@@ -1,5 +1,6 @@
 body {
   font-family: 'Montserrat', sans-serif;
+  background: #f3f5f9;
 }
 
 h1 {
@@ -10,6 +11,51 @@ h1 {
   display: flex;
   flex-direction: row;
   padding: 80px;
+  justify-content: space-between;
+  position: relative;
+}
+/* contacts-section */
+
+.contacts-section {
+  position: absolute;
+  top: 35px;
+  right: 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.telegram-link,
+.viber-link,
+.phone-link-icon {
+  text-decoration: none;
+}
+
+.telegram-icon,
+.viber-icon,
+.phone-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.telegram-icon {
+  margin-right: 15px;
+}
+
+.viber-icon {
+  margin-right: 15px;
+}
+
+.phone-icon {
+  margin-right: 20px;
+}
+
+.phone-link-number {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  color: #333333;
+  text-decoration: none;
 }
 
 /* experience-section */
@@ -18,6 +64,7 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 268px;
 }
 
 .my-photo {
@@ -79,10 +126,11 @@ h1 {
 }
 /*my-info-section */
 .my-info-section {
-  margin-left: 70px;
+  margin: 0 25px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  width: 33%;
 }
 
 .my-profession {
@@ -147,4 +195,222 @@ h1 {
 
 .my-skills-text {
   color: #4f4f4f;
+}
+
+/* project-price-section */
+.project-price-section {
+  width: 268px;
+}
+
+.project-price-form {
+  padding: 40px;
+  background: #ffffff;
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+}
+
+.project-price-title {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #2f80ed;
+  margin-bottom: 50px;
+}
+
+.project-type-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.project-price-form-field-title {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  color: #333333;
+  margin-bottom: 15px;
+}
+
+.project-price-select {
+  font-size: 18px;
+  line-height: 24px;
+  color: #333333;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #4f4f4f;
+  padding-bottom: 8px;
+}
+
+.activity-type-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.activity-type-item {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 15px;
+}
+
+.activity-type-title {
+  font-size: 16px;
+  line-height: 24px;
+  color: #4f4f4f;
+  margin-left: 20px;
+}
+
+.activity-type-checkbox {
+  width: 18px;
+}
+
+.project-price-sum {
+  font-size: 16px;
+  line-height: 24px;
+  color: #4f4f4f;
+}
+
+.project-price-sum-curency {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  color: #2f80ed;
+}
+
+.project-price-container {
+  margin-bottom: 30px;
+}
+
+.project-price-calculation-container {
+  width: 100%;
+  text-align: center;
+}
+
+.project-price-calculate-btn {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+  background: #2f80ed;
+  border-radius: 30px;
+  outline: none;
+  border: none;
+  padding: 12px 32px 12px 32px;
+  cursor: pointer;
+}
+
+/* Modals section */
+
+.modal-bgd {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(51, 51, 51, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  pointer-events: none;
+  opacity: 0;
+}
+
+.modal-active {
+  pointer-events: all;
+  opacity: 1;
+}
+
+.modal-container {
+  background: #ffffff;
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  padding: 120px 40px;
+  width: 364px;
+  height: 604px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.modal-title {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #2f80ed;
+  margin-bottom: 40px;
+}
+
+.user-email-title {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  color: #333333;
+  width: 100%;
+}
+
+.modal-container-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.user-email {
+  margin-bottom: 115px;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 15px;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 8px 0;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #4f4f4f;
+}
+
+.modal-submit-btn {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+  background: #2f80ed;
+  border-radius: 30px;
+  outline: none;
+  border: none;
+  padding: 12px 32px 12px 32px;
+  cursor: pointer;
+}
+
+.modal-icon {
+  margin-bottom: 35px;
+}
+
+.modal-close-btn {
+  border: none;
+  outline: none;
+  background: none;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+
+.modal-success-message {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #2f80ed;
+}
+
+.modal-container-success {
+  justify-content: center;
+}
+
+.modal-success-icon {
+  margin-bottom: 35px;
 }
