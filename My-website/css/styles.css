@@ -1,6 +1,16 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
 body {
+  height: 100%;
+  width: 100%;
   font-family: 'Montserrat', sans-serif;
   background: #f3f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 h1 {
@@ -233,6 +243,7 @@ h1 {
 }
 
 .project-price-select {
+  font-family: 'Montserrat', sans-serif;
   font-size: 18px;
   line-height: 24px;
   color: #333333;
@@ -315,6 +326,8 @@ h1 {
 
   pointer-events: none;
   opacity: 0;
+
+  transition: all 0.3s ease-in-out;
 }
 
 .modal-active {
@@ -361,7 +374,6 @@ h1 {
 }
 
 .user-email {
-  margin-bottom: 115px;
   width: 100%;
   font-family: 'Montserrat', sans-serif;
   margin-top: 15px;
@@ -371,6 +383,26 @@ h1 {
   border: none;
   outline: none;
   border-bottom: 1px solid #4f4f4f;
+}
+
+.email-input-container {
+  margin-bottom: 115px;
+}
+
+.email-error-text {
+  color: #eb5757;
+  font-size: 16px;
+  line-height: 24px;
+  margin-top: 10px;
+  display: none;
+}
+
+.email-input-container-error .email-error-text {
+  display: block;
+}
+
+.email-input-container-error .user-email {
+  border-bottom: 1px solid #eb5757;
 }
 
 .modal-submit-btn {
@@ -397,6 +429,7 @@ h1 {
   position: absolute;
   top: 30px;
   right: 30px;
+  cursor: pointer;
 }
 
 .modal-success-message {

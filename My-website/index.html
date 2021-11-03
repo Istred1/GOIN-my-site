@@ -110,17 +110,17 @@
      <!--Project-price-section-->
 
     <section class="project-price-section">
-        <form action="#" class="project-price-form">
+        <form class="project-price-form" method="POST" name="contact" data-netlify="true" id="project-price-form">
              <h4 class="project-price-title">Рассчитай стоимость проекта</h4>
 
              <div class="project-type-container">
 
                  <label for="project-type" class="project-price-form-field-title">Тип сайта</label>
                  <select name="project-type" id="project-type" class="project-price-select">
-                     <option value="Landing-page">Landing page</option>
-                     <option value="cms">CMS</option>   
-                     <option value="wordpress">wordpress</option>
-                     <option selected value="e-shop">E shop</option>
+                     <option value="landing-page">Landing page</option>
+                     <option value="online-store">Online Store</option>   
+                     <option value="web-application">Web Application</option>
+                     <option selected value="mobile-application">Mobile Application</option>
                 </select>
             </div>
 
@@ -134,12 +134,12 @@
                  </div>
 
                  <div class="activity-type-item">
-                     <input type="checkbox" name="design" id="design" class="activity-type-checkbox">
+                     <input checked type="checkbox" name="design" id="design" class="activity-type-checkbox">
                      <label for="design" class="activity-type-title">Design</label>
                  </div>
 
                  <div class="activity-type-item">
-                     <input checked type="checkbox" name="development" id="development" class="activity-type-checkbox">
+                     <input type="checkbox" name="development" id="development" class="activity-type-checkbox">
                      <label for="development" class="activity-type-title">Development</label>
                  </div>
 
@@ -155,7 +155,7 @@
 
             <div class="project-price-container">
                 <p class="project-price-form-field-title">Стоимость</p>
-                <P class="project-price-sum"><span class="project-price-sum-curency">$</span> 2000</P>
+                <P class="project-price-sum"><span class="project-price-sum-curency">$</span> <span id="total-price">0</span></P>
             </div>
             <div class="project-price-calculation-container">
             <button class="project-price-calculate-btn">Отправить запрос</button>
@@ -168,7 +168,7 @@
 
     </div>
 
-    <div class="modal-bgd">
+    <div class="modal-bgd" id="modal-email">
         <div class="modal-container">
             <button class="modal-close-btn">
                 <img src="./img/icons/close-icon.svg" alt="close icon">
@@ -176,17 +176,20 @@
             <img src="./img/icons/mail-icon.svg" alt="mail-icon" class="modal-icon">
             <h4 class="modal-title">Я свяжусь с вами на<br>протяжении ближайшего часа</h4>
 
-             <form action="#" class="modal-container-form">
+             <form action="#" class="modal-container-form" id="modal-email-container">
+
+              <div class="email-input-container" id="email-input-container-error">
                 <label for="user-email" class="user-email-title">Email</label>
                 <input type="email" name="user-email" id="user-email" class="user-email" placeholder="Укажите email">
-                
+                <p class="email-error-text">Проверьте email</p>
+              </div>
                 <button type="submit" class="modal-submit-btn">Отправить</button>
              </form>
 
         </div>
     </div>
-
-    <div class="modal-bgd modal-active">
+<!-- modal-active -->
+    <div class="modal-bgd" id="success-modal">
         <div class="modal-container modal-container-success">
          <button class="modal-close-btn">
              <img src="./img/icons/close-icon.svg" alt="close icon">
@@ -200,5 +203,7 @@
         </div>
     </div>
     
+    <script src="./Js/script.js"></script>
+
 </body>
 </html>
