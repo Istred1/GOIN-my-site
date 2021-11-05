@@ -110,13 +110,13 @@
      <!--Project-price-section-->
 
     <section class="project-price-section">
-        <form class="project-price-form" method="POST" name="contact" data-netlify="true" id="project-price-form">
+        <form class="project-price-form" method="POST" name="Просчёт проекта" data-netlify="true" id="project-price-form">
              <h4 class="project-price-title">Рассчитай стоимость проекта</h4>
 
              <div class="project-type-container">
 
                  <label for="project-type" class="project-price-form-field-title">Тип сайта</label>
-                 <select name="project-type" id="project-type" class="project-price-select">
+                 <select name="Project type" id="project-type" class="project-price-select">
                      <option value="landing-page">Landing page</option>
                      <option value="online-store">Online Store</option>   
                      <option value="web-application">Web Application</option>
@@ -129,22 +129,22 @@
                 <p class="project-price-form-field-title">Тип работ</p>
 
                  <div class="activity-type-item">
-                     <input type="checkbox" name="project-management" id="project-management" class="activity-type-checkbox">
+                     <input type="checkbox" name="Project management" id="project-management" class="activity-type-checkbox">
                      <label for="project-management" class="activity-type-title">Project Management</label>
                  </div>
 
                  <div class="activity-type-item">
-                     <input checked type="checkbox" name="design" id="design" class="activity-type-checkbox">
+                     <input checked type="checkbox" name="Design" id="design" class="activity-type-checkbox">
                      <label for="design" class="activity-type-title">Design</label>
                  </div>
 
                  <div class="activity-type-item">
-                     <input type="checkbox" name="development" id="development" class="activity-type-checkbox">
+                     <input type="checkbox" name="Development" id="development" class="activity-type-checkbox">
                      <label for="development" class="activity-type-title">Development</label>
                  </div>
 
                  <div class="activity-type-item">
-                     <input type="checkbox" name="qa" id="qa" class="activity-type-checkbox">
+                     <input type="checkbox" name="QA" id="qa" class="activity-type-checkbox">
                      <label for="qa" class="activity-type-title">QA</label>
                  </div>
                 
@@ -157,6 +157,9 @@
                 <p class="project-price-form-field-title">Стоимость</p>
                 <P class="project-price-sum"><span class="project-price-sum-curency">$</span> <span id="total-price">0</span></P>
             </div>
+
+            <input type="hidden" name="Email">
+
             <div class="project-price-calculation-container">
             <button class="project-price-calculate-btn">Отправить запрос</button>
             </div>

@@ -104,17 +104,32 @@ closeButtons.forEach(function (closeBtn) {
 
 const modalEmailContainer = document.querySelector('#modal-email-container');
 
-modalEmailContainer.addEventListener('submit', function (event) {
+modalEmailContainer.addEventListener('submit', function(event) {
     event.preventDefault();
 
     const userEmailInput = document.querySelector('#user-email');
 
     if (userEmailInput.value) {
-        emailModal.classList.remove('modal-active');
-        successModal.classList.add('modal-active');
+
+        const formData = new FormData(formEl);
+
+        formData.append('Email', userEmailInput.value);
+        
+         fetch('/', {
+             method: 'POST',
+             headers: { "Content-Type": "application/x-www-form-urlencoded" },
+             body: new URLSearchParams(formData).toString()
+         })
+            .then(function() {
+                emailModal.classList.remove('modal-active');
+                successModal.classList.add('modal-active');
+             })
+            .catch(() => alert('Не удалось отправить форму'))
+        
+        return;
     }
 
-    const inputContainer = document.querySelector('#email-input-container-error');
+    const inputContainer = document.querySelector('#email-input-container');
 
     inputContainer.classList.add('email-input-container-error')
 });
